@@ -1,5 +1,5 @@
 import { site } from '../site.mjs';
-import { esc, md, inline, img } from '../lib/html.mjs';
+import { esc, md, inline, img, beginDedupe, endDedupe } from '../lib/html.mjs';
 import { layout } from './layout.mjs';
 import { leadForm, phoneLink } from './parts.mjs';
 import { services } from '../content/services/index.mjs';
@@ -36,10 +36,11 @@ const faqs = [
 ];
 
 export function renderHome() {
+  beginDedupe(['blueFloor', 'flakeGarage', 'greyTexture', 'heroBackdrop', 'heroFloor', 'palmHome', 'warehouseShine', 'xFlakeRust', 'xTerrazzo']);
   const s = site;
   const body = `
 <section class="home-hero" aria-labelledby="hero-h">
-  <div class="home-hero__backdrop" aria-hidden="true">${img('heroBackdrop', { widths: [800, 1400, 2000], alt: '', eager: true })}</div>
+  <div class="home-hero__backdrop" aria-hidden="true">${img('heroBackdrop', { keep: true, widths: [800, 1400, 2000], alt: '', eager: true })}</div>
   <div class="wrap home-hero__grid">
     <div class="reveal is-in">
       <h1 id="hero-h">Garage and concrete floors built for Ahwatukee summers</h1>
@@ -56,7 +57,7 @@ export function renderHome() {
     </div>
     <div class="home-hero__visual">
       <span class="arch-ring" aria-hidden="true"></span>
-      <div class="arch">${img('heroFloor', { eager: true, sizes: '(max-width: 1020px) 90vw, 520px', widths: [480, 760, 1040], ratio: 0.8 })}</div>
+      <div class="arch">${img('heroFloor', { keep: true, eager: true, sizes: '(max-width: 1020px) 90vw, 520px', widths: [480, 760, 1040], ratio: 0.8 })}</div>
       <p class="home-hero__chip"><strong>Ground, not etched</strong>Every slab is diamond-ground before coating so the bond holds when tires come in hot.</p>
     </div>
   </div>
@@ -157,7 +158,7 @@ export function renderHome() {
 <section class="section" aria-labelledby="deco-h">
   <div class="wrap">
     <div class="texture-band">
-      <div class="texture-band__bg" aria-hidden="true">${img('greyTexture', { widths: [800, 1400], alt: '' })}</div>
+      <div class="texture-band__bg" aria-hidden="true">${img('xFlakeRust', { keep: true, widths: [800, 1400], alt: '' })}</div>
       <div class="texture-band__grid">
         <div class="reveal">
           <h2 id="deco-h">Decorative and metallic finishes</h2>
@@ -275,12 +276,12 @@ export function renderHome() {
       <p class="muted">A look at the kinds of surfaces we build. Ask to see physical flake and color samples at your estimate.</p>
     </div>
     <div class="gallery">
-      <figure class="reveal-img">${img('heroFloor', { sizes: '(max-width: 680px) 90vw, 600px', widths: [500, 900], ratio: 1 })}<figcaption><b>Full-flake garage floor</b>Speckled color that hides dust and tire marks</figcaption></figure>
-      <figure class="reveal-img">${img('marble', { sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Marble-style metallic</b>Light, veined tones for interiors</figcaption></figure>
-      <figure class="reveal-img">${img('blueFloor', { sizes: '(max-width: 680px) 45vw, 400px', widths: [400, 700], ratio: 1 })}<figcaption><b>Solid color with striping</b>Shops and studios</figcaption></figure>
-      <figure class="reveal-img">${img('greyTexture', { sizes: '(max-width: 680px) 45vw, 200px', widths: [300, 500], ratio: 0.5 })}<figcaption><b>Satin grey</b></figcaption></figure>
-      <figure class="reveal-img">${img('warehouseShine', { sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Industrial high-build</b>Thick, light-reflective coating</figcaption></figure>
-      <figure class="reveal-img">${img('palmHome', { sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Outdoor living</b>Cool-touch patio and deck coatings</figcaption></figure>
+      <figure class="reveal-img">${img('flakeGarage', { keep: true, sizes: '(max-width: 680px) 90vw, 600px', widths: [500, 900], ratio: 1 })}<figcaption><b>Full-flake garage floor</b>Speckled color that hides dust and tire marks</figcaption></figure>
+      <figure class="reveal-img">${img('xTerrazzo', { keep: true, sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Fine-chip decorative blend</b>Light base scattered with colored chips</figcaption></figure>
+      <figure class="reveal-img">${img('blueFloor', { keep: true, sizes: '(max-width: 680px) 45vw, 400px', widths: [400, 700], ratio: 1 })}<figcaption><b>Solid color with striping</b>Shops and studios</figcaption></figure>
+      <figure class="reveal-img">${img('greyTexture', { keep: true, sizes: '(max-width: 680px) 45vw, 200px', widths: [300, 500], ratio: 0.5 })}<figcaption><b>Satin grey</b></figcaption></figure>
+      <figure class="reveal-img">${img('warehouseShine', { keep: true, sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Industrial high-build</b>Thick, light-reflective coating</figcaption></figure>
+      <figure class="reveal-img">${img('palmHome', { keep: true, sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Outdoor living</b>Cool-touch patio and deck coatings</figcaption></figure>
     </div>
   </div>
 </section>
@@ -326,6 +327,7 @@ export function renderHome() {
   </div>
 </section>`;
 
+  endDedupe();
   return layout({
     path: '/',
     title: 'Epoxy Flooring Ahwatukee | Garage & Concrete Floor Coatings',
