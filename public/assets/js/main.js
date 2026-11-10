@@ -69,10 +69,13 @@
   if (reduce || !('IntersectionObserver' in window)) {
     revealEls.forEach((el) => el.classList.add('is-in'));
   } else {
+    // A fully clipped image never counts as intersecting, so .reveal-img is watched through its parent.
+    const watch = new Map();
+    revealEls.forEach((el) => { const t = el.classList.contains('reveal-img') ? el.parentElement : el; if (!watch.has(t)) watch.set(t, []); watch.get(t).push(el); });
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    revealEls.forEach((el) => io.observe(el));
+      entries.forEach((en) => { if (en.isIntersecting) { watch.get(en.target).forEach((el) => el.classList.add('is-in')); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.02 });
+    watch.forEach((_, t) => io.observe(t));
   }
 
   /* Gentle parallax on marked backgrounds */
