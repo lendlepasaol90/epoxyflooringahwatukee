@@ -275,7 +275,7 @@ export function renderHome() {
       <p class="muted">A look at the kinds of surfaces we build. Ask to see physical flake and color samples at your estimate.</p>
     </div>
     <div class="gallery">
-      <figure class="reveal-img">${img('garageCars', { sizes: '(max-width: 680px) 90vw, 600px', widths: [500, 900], ratio: 1 })}<figcaption><b>High-gloss garage finish</b>Reflective topcoat that brightens the whole space</figcaption></figure>
+      <figure class="reveal-img">${img('heroFloor', { sizes: '(max-width: 680px) 90vw, 600px', widths: [500, 900], ratio: 1 })}<figcaption><b>Full-flake garage floor</b>Speckled color that hides dust and tire marks</figcaption></figure>
       <figure class="reveal-img">${img('marble', { sizes: '(max-width: 680px) 45vw, 600px', widths: [500, 900], ratio: 1.6 })}<figcaption><b>Marble-style metallic</b>Light, veined tones for interiors</figcaption></figure>
       <figure class="reveal-img">${img('blueFloor', { sizes: '(max-width: 680px) 45vw, 400px', widths: [400, 700], ratio: 1 })}<figcaption><b>Solid color with striping</b>Shops and studios</figcaption></figure>
       <figure class="reveal-img">${img('greyTexture', { sizes: '(max-width: 680px) 45vw, 200px', widths: [300, 500], ratio: 0.5 })}<figcaption><b>Satin grey</b></figcaption></figure>

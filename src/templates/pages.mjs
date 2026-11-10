@@ -148,7 +148,7 @@ We use your information only to respond to your request, schedule an estimate an
 
 ## Third parties
 
-Form submissions may be delivered to us through an email or workflow service so we can respond. The map in the footer is provided by Google Maps and the photos are served from Unsplash's image network; those services may collect standard technical data such as your IP address under their own privacy policies.
+Form submissions may be delivered to us through an email or workflow service so we can respond. The map in the footer is provided by Google Maps and Google may collect standard technical data such as your IP address under their own privacy policies.
 
 ## Your choices
 

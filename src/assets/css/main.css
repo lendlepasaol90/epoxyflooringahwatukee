@@ -562,3 +562,6 @@ strong { color: var(--charcoal); font-weight: 600; }
 @media print {
   .site-header, .sticky-call, .site-footer__map, .lead-form { display: none; }
 }
+
+/* Let comparison tables scroll inside their box instead of widening the page */
+main *:has(table) { min-width: 0; }

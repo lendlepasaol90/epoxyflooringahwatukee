@@ -52,7 +52,7 @@ The catch is the same speed. A polyaspartic has a short working time once mixed.
 
 **Resistance to hot tires and chemicals.** A properly built polyaspartic topcoat stands up well to hot tires, gasoline, oil, brake fluid and most household chemicals.
 
-**Lower odor indoors.** Many polyaspartic products are lower in odor than solvent-heavy coatings, which helps in attached garages and interior spaces.
+**Gentler on the house.** Plenty of polyaspartic formulas carry less smell than older solvent coatings, a real plus when the garage shares a wall with the kitchen.
 
 **Clear, hard finish.** The topcoat is hard and glossy, and can be made satin or textured if you prefer.`,
     },
@@ -107,7 +107,7 @@ We are happy to do quick installs when the slab allows it. When a floor needs ex
     { q: 'Is polyaspartic better than epoxy?', a: 'They do different jobs. Epoxy is excellent as a base coat that bonds deeply and builds thickness. Polyaspartic is better as a topcoat in sun and where speed matters. Many of the best systems use both.' },
     { q: 'Will a polyaspartic floor yellow?', a: 'Polyaspartic topcoats are UV stable and resist yellowing far better than standard epoxy. That is the main reason we use them on garages with west-facing doors and on outdoor surfaces.' },
     { q: 'Can polyaspartic go outdoors?', a: 'Yes. It is one of the better choices for exterior coatings in Arizona, paired with a texture for grip. The slab must be in good condition and properly prepared.' },
-    { q: 'How soon can I drive on it?', a: 'Usually 24 to 48 hours, depending on temperature and product. We give you exact times for your floor in writing.' },
+    { q: 'How soon can I drive on it?', a: 'Most cars can come back within a day or two. Warm Ahwatukee weather speeds the cure, and your written handover sheet lists the exact time.' },
     { q: 'Does it smell during installation?', a: 'There is some odor during application that clears quickly with ventilation. We keep the garage door partly open and can advise on timing if you have a home office next to the garage.' },
     {"q": "Can polyaspartic be applied in cold weather?", "a": "Yes. It cures at lower temperatures than most epoxies, which is helpful on cooler winter mornings. In Ahwatukee our bigger concern is heat, which we manage by starting early."},
     {"q": "Why do some companies skip grinding on polyaspartic jobs?", "a": "Usually to save time and offer a lower price. Polyaspartic needs a properly ground surface to bond, and skipping that step is a common reason fast floors peel. We never skip it, and we would suggest asking any installer how they prepare the slab."},
