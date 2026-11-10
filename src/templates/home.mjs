@@ -87,7 +87,6 @@ export function renderHome() {
         <span class="svc-index__name">${esc(sv.name)}</span>
         <span class="svc-index__desc">${esc(sv.summary)}</span>
         <span class="svc-index__go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
-        <span class="svc-index__thumb" aria-hidden="true">${img(sv.image, { widths: [340], sizes: '170px', ratio: 0.8, alt: '' })}</span>
       </a></li>`,
         )
         .join('')}

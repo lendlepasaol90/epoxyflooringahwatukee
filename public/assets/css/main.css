@@ -259,9 +259,6 @@ strong { color: var(--charcoal); font-weight: 600; }
 .svc-index__desc { color: var(--ink-soft); font-size: 0.97rem; }
 .svc-index__go { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; transition: background-color 0.3s, color 0.3s, transform 0.4s var(--ease); }
 .svc-index a:hover .svc-index__go { background: var(--adobe); color: #fff; border-color: var(--adobe); transform: rotate(-45deg); }
-.svc-index__thumb { position: absolute; right: 5.5rem; top: 50%; width: 170px; aspect-ratio: 4/5; border-radius: 999px 999px 12px 12px; overflow: hidden; pointer-events: none; opacity: 0; transform: translateY(-50%) scale(0.9) rotate(-3deg); transition: opacity 0.35s, transform 0.5s var(--ease); z-index: 2; box-shadow: var(--shadow); }
-.svc-index__thumb img { width: 100%; height: 100%; object-fit: cover; }
-@media (hover: hover) and (min-width: 1000px) { .svc-index a:hover .svc-index__thumb { opacity: 1; transform: translateY(-50%) scale(1) rotate(-3deg); } }
 
 /* Chapter layouts for the core service categories */
 .chapter { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
