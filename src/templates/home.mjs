@@ -69,7 +69,7 @@ export function renderHome() {
     <div class="prose reveal reveal-delay-1">
       <p>Most of the floors we are asked to fix in Ahwatukee did not fail because of a bad color choice. They failed because somebody rolled a coating onto dusty, sealed or damp concrete and hoped for the best. Within a summer or two the floor lifted under the tires, yellowed by the garage door or turned chalky where the afternoon sun hits it.</p>
       <p>So our work starts underneath. We look at the slab, check for moisture, mark the cracks and figure out what is already on the surface. Then we grind it, repair it and pick a coating system that fits how you use the space. A garage that holds a truck, a golf cart and a workbench needs something different from a casita floor or a salon on Ray Road.</p>
-      <p>We install <a href="/garage-floor-coatings/">garage floor coatings</a>, <a href="/residential-epoxy-flooring/">residential epoxy</a> for interior rooms, <a href="/decorative-flake-flooring/">decorative flake</a> and <a href="/metallic-epoxy-flooring/">metallic epoxy</a> finishes, fast-curing <a href="/polyaspartic-floor-coatings/">polyaspartic</a> and <a href="/polyurea-floor-coatings/">polyurea</a> systems, <a href="/patio-concrete-coatings/">patio and pool deck coatings</a>, and floors for <a href="/commercial-epoxy-flooring/">commercial spaces</a> and <a href="/warehouse-floor-coatings/">warehouses</a>. Every estimate is free, done in person, and written down so you can compare options side by side.</p>
+      <p>We install <a href="/garage-floors/">garage floor coatings</a>, <a href="/interior-epoxy-floors/">residential epoxy</a> for interior rooms, <a href="/flake-floors/">decorative flake</a> and <a href="/metallic-epoxy/">metallic epoxy</a> finishes, fast-curing <a href="/polyaspartic/">polyaspartic</a> and <a href="/polyurea/">polyurea</a> systems, <a href="/patio-coatings/">patio and pool deck coatings</a>, and floors for <a href="/commercial-floors/">commercial spaces</a> and <a href="/warehouse-and-industrial/">warehouses</a>. Every estimate is free, done in person, and written down so you can compare options side by side.</p>
     </div>
   </div>
 </section>
@@ -109,7 +109,7 @@ export function renderHome() {
         <li>Flake blends from tight, speckled granite looks to bold, full-coverage chips</li>
         <li>Stem walls and the first few inches of wall can be coated for a cleaner edge</li>
       </ul>
-      <p><a class="text-link" href="/garage-floor-coatings/">How our garage coatings are built</a></p>
+      <p><a class="text-link" href="/garage-floors/">How our garage coatings are built</a></p>
     </div>
   </div>
 </section>
@@ -122,7 +122,7 @@ export function renderHome() {
     <div class="prose reveal">
       <h2 id="res-h">Residential epoxy beyond the garage</h2>
       <p>Coated concrete has moved indoors in a lot of Arizona homes. It stays cool underfoot, it cleans with a damp mop, and it does not trap dust and allergens the way carpet does. Homeowners ask us about it for casitas, laundry rooms, home gyms, mudrooms off the garage, game rooms and full open-plan living areas where the tile is coming up anyway.</p>
-      <p>Interior floors get a different approach than garages. We pay closer attention to sheen, color consistency across large areas and how the floor reads next to cabinetry and wall color. Satin finishes hide footprints better than full gloss, and a sealed metallic floor can carry a whole room on its own. See our <a href="/residential-epoxy-flooring/">residential epoxy flooring</a> page for room-by-room advice.</p>
+      <p>Interior floors get a different approach than garages. We pay closer attention to sheen, color consistency across large areas and how the floor reads next to cabinetry and wall color. Satin finishes hide footprints better than full gloss, and a sealed metallic floor can carry a whole room on its own. See our <a href="/interior-epoxy-floors/">residential epoxy flooring</a> page for room-by-room advice.</p>
     </div>
   </div>
 </section>
@@ -139,7 +139,7 @@ export function renderHome() {
         <div class="duo__body">
           <h3>Commercial epoxy flooring</h3>
           <p>Retail floors, restaurant back-of-house, salons, medical and dental suites, fitness studios, showrooms and office break rooms. These spaces need a seamless surface that is easy to sanitize, holds up to rolling carts and chairs, and still looks sharp in front of customers. Common choices are solid-color epoxy with a urethane or polyaspartic topcoat, flake systems in high-traffic corridors, and slip-resistant textures for wet areas.</p>
-          <p><a class="text-link" href="/commercial-epoxy-flooring/">Commercial flooring details</a></p>
+          <p><a class="text-link" href="/commercial-floors/">Commercial flooring details</a></p>
         </div>
       </article>
       <article class="duo__panel reveal reveal-delay-1">
@@ -147,7 +147,7 @@ export function renderHome() {
         <div class="duo__body">
           <h3>Industrial and warehouse solutions</h3>
           <p>Warehouses, distribution space, fabrication shops, auto bays and storage units along the I-10 and into Tempe and Chandler. Here the priorities shift to forklift traffic, dust control, chemical resistance and visibility. We use thicker high-build epoxies or polyurea, add safety striping and walkway markings, and can include a light-reflective color that brightens the whole building without new fixtures.</p>
-          <p><a class="text-link" href="/warehouse-floor-coatings/">Warehouse coating details</a></p>
+          <p><a class="text-link" href="/warehouse-and-industrial/">Warehouse coating details</a></p>
         </div>
       </article>
     </div>
@@ -163,7 +163,7 @@ export function renderHome() {
           <h2 id="deco-h">Decorative and metallic finishes</h2>
           <p>Not every floor needs to look like a garage. Decorative systems use the same tough resins, but the finish becomes the design. Metallic epoxy uses suspended mica pigments that we move by hand while the resin is wet, so the floor ends up with depth and drift that looks like polished stone, poured marble or moving water. No two are the same, which is the point.</p>
           <p>Flake floors are the practical cousin. Vinyl chips broadcast into the base coat give a speckled, terrazzo-like texture that hides dust and wear. In Ahwatukee, warm blends with tan, cream and a little charcoal tend to sit well next to stucco and desert landscaping.</p>
-          <p><a class="text-link" href="/metallic-epoxy-flooring/">Metallic epoxy</a>&ensp;&ensp;<a class="text-link" href="/decorative-flake-flooring/">Decorative flake</a></p>
+          <p><a class="text-link" href="/metallic-epoxy/">Metallic epoxy</a>&ensp;&ensp;<a class="text-link" href="/flake-floors/">Decorative flake</a></p>
         </div>
         <ul class="finish-list reveal reveal-delay-1">
           <li><strong>Metallic swirl</strong><span>Hand-worked pearl, copper, bronze or slate tones with real depth. Best indoors or in a showcase garage.</span></li>
@@ -288,9 +288,9 @@ export function renderHome() {
 <section class="section section--stone" aria-labelledby="areas-h">
   <div class="wrap areas">
     <div class="reveal">
-      <h2 id="areas-h">Service areas</h2>
+      <h2 id="areas-h">Areas</h2>
       <p>We are centered in Ahwatukee and regularly cover the communities around it. If you are a little outside this list, call anyway. For larger commercial jobs we travel further across the Valley.</p>
-      <p><a class="text-link" href="/service-areas/">All service areas</a></p>
+      <p><a class="text-link" href="/areas/">All service areas</a></p>
     </div>
     <div class="area-grid reveal reveal-delay-1">
       ${s.serviceAreas.map((a) => `<div><strong>${esc(a.name)}</strong><span>${esc(a.note)}</span></div>`).join('')}

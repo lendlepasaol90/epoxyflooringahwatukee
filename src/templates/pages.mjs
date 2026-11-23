@@ -17,7 +17,7 @@ function simpleHero({ title, lede, image = 'heroBackdrop', trail }) {
 const sideForm = (id, preset) => `<aside class="svc-aside"><div class="form-card">${leadForm({ id, heading: 'Free estimate', intro: 'Tell us about the floor and we will be in touch to schedule a visit.', preset })}</div></aside>`;
 
 export function renderAbout() {
-  const trail = [{ name: 'Home', path: '/' }, { name: 'About us', path: '/about-us/' }];
+  const trail = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }];
   const body = `${simpleHero({ title: 'About our flooring company', lede: 'A local concrete coatings crew working out of the Foothills, focused on careful prep, honest quotes and floors that survive Arizona summers.', image: 'desertHome', trail })}
 <section class="section section--tight">
   <div class="wrap page-body">
@@ -43,14 +43,14 @@ The village has thousands of garages that bake every summer and plenty of older 
 ### What to expect when you call
 
 We will ask a few questions about the space, then set a time to visit. At the visit we measure, check the slab, show you flake and color samples, and talk through two or three options that make sense. Your written estimate follows, with no pressure and no expiring "today only" discount.`)}
-      <p><a class="btn btn--primary" href="/contact-us/">Contact us</a> <a class="btn btn--ghost" href="/garage-floor-coatings/">See garage coatings</a></p>
+      <p><a class="btn btn--primary" href="/contact/">Contact us</a> <a class="btn btn--ghost" href="/garage-floors/">See garage coatings</a></p>
     </div>
     ${sideForm('about-form')}
   </div>
 </section>`;
   return layout({
-    path: '/about-us/',
-    title: 'About Us | Epoxy Flooring Ahwatukee',
+    path: '/about/',
+    title: 'About | Epoxy Flooring Ahwatukee',
     description: 'Meet the Ahwatukee floor coating crew that puts concrete prep first. How we work, what we believe about floors and what to expect from your free estimate.',
     body,
     current: 'about',
@@ -72,7 +72,7 @@ const areaDetail = {
 };
 
 export function renderAreas() {
-  const trail = [{ name: 'Home', path: '/' }, { name: 'Service areas', path: '/service-areas/' }];
+  const trail = [{ name: 'Home', path: '/' }, { name: 'Areas', path: '/areas/' }];
   const body = `${simpleHero({ title: 'Areas we serve around Ahwatukee', lede: 'Based in the Foothills, covering the southeast Valley for residential projects and further for commercial work.', image: 'valleyView', trail })}
 <section class="section section--tight">
   <div class="wrap">
@@ -95,8 +95,8 @@ If your town is not listed, give us a call. We take on commercial and warehouse 
   </div>
 </section>`;
   return layout({
-    path: '/service-areas/',
-    title: 'Service Areas | Epoxy Flooring Ahwatukee, Tempe & Chandler',
+    path: '/areas/',
+    title: 'Areas | Epoxy Flooring Ahwatukee, Tempe & Chandler',
     description: 'Epoxy and garage floor coatings for Ahwatukee Foothills, Tempe, Chandler, south Phoenix, Laveen, Gilbert, Guadalupe, Mesa and Sun Lakes.',
     body,
     current: 'areas',
@@ -106,7 +106,7 @@ If your town is not listed, give us a call. We take on commercial and warehouse 
 }
 
 export function renderContact() {
-  const trail = [{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-us/' }];
+  const trail = [{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact/' }];
   const body = `${simpleHero({ title: 'Contact us', lede: 'Book a free estimate, ask about a coating system or check our schedule. The form takes under a minute.', image: 'cactusGold', trail })}
 <section class="section section--tight" id="estimate">
   <div class="wrap closer__grid">
@@ -116,7 +116,7 @@ export function renderContact() {
       <ul class="closer__contact">
         <li><span>Phone</span>${phoneLink()}</li>
         ${site.email ? `<li><span>Email</span><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></li>` : ''}
-        <li><span>Service area</span><a href="/service-areas/">${esc(site.cityLong)} and nearby</a></li>
+        <li><span>Service area</span><a href="/areas/">${esc(site.cityLong)} and nearby</a></li>
       </ul>
       <h3 style="margin-top:2rem">What happens next</h3>
       <ol><li>We get in touch to set a time for your estimate.</li><li>We visit, measure, test the slab and show samples.</li><li>You receive a written, itemized quote.</li></ol>
@@ -125,7 +125,7 @@ export function renderContact() {
   </div>
 </section>`;
   return layout({
-    path: '/contact-us/',
+    path: '/contact/',
     title: 'Contact Us | Free Epoxy Floor Estimates in Ahwatukee',
     description: 'Request a free, in-person estimate for garage, residential or commercial epoxy flooring in Ahwatukee Foothills and nearby communities.',
     body,
@@ -136,7 +136,7 @@ export function renderContact() {
 }
 
 export function renderPrivacy() {
-  const trail = [{ name: 'Home', path: '/' }, { name: 'Privacy policy', path: '/privacy-policy/' }];
+  const trail = [{ name: 'Home', path: '/' }, { name: 'Privacy policy', path: '/privacy/' }];
   const body = `${simpleHero({ title: 'Privacy policy', lede: 'How we handle the information you send through this website.', trail })}
 <section class="section section--tight"><div class="wrap prose narrow">${md(`## What we collect
 
@@ -152,19 +152,19 @@ Form submissions may be delivered to us through an email or workflow service so 
 
 ## Your choices
 
-You can ask us to update or delete the information you have sent by contacting us using the details on our [contact page](/contact-us/).
+You can ask us to update or delete the information you have sent by contacting us using the details on our [contact page](/contact/).
 
 ## Changes
 
 We may update this policy from time to time. The current version is always on this page.`)}</div></section>`;
-  return layout({ path: '/privacy-policy/', title: 'Privacy Policy | Epoxy Flooring Ahwatukee', description: 'How Epoxy Flooring Ahwatukee collects, uses and protects the information you submit through estimate and contact forms on this website.', body, breadcrumbs: trail });
+  return layout({ path: '/privacy/', title: 'Privacy Policy | Epoxy Flooring Ahwatukee', description: 'How Epoxy Flooring Ahwatukee collects, uses and protects the information you submit through estimate and contact forms on this website.', body, breadcrumbs: trail });
 }
 
 export function render404() {
   const body = `<section class="section notfound"><div class="wrap narrow" style="margin-inline:auto">
   <h1>That page is not here</h1>
   <p class="lede">The link may be old or mistyped. Try one of these instead.</p>
-  <p><a class="btn btn--primary" href="/">Go to the homepage</a> <a class="btn btn--ghost" href="/garage-floor-coatings/">Garage floor coatings</a> <a class="btn btn--ghost" href="/contact-us/">Contact us</a></p>
+  <p><a class="btn btn--primary" href="/">Go to the homepage</a> <a class="btn btn--ghost" href="/garage-floors/">Garage floor coatings</a> <a class="btn btn--ghost" href="/contact/">Contact us</a></p>
 </div></section>`;
   return layout({ path: '/404.html', title: 'Page not found | Epoxy Flooring Ahwatukee', description: 'The page you requested could not be found.', body }).replace(
     '<meta name="robots" content="index, follow, max-image-preview:large">',

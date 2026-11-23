@@ -15,6 +15,9 @@ const orgSchema = () => ({
   knowsAbout: ['Epoxy flooring', 'Garage floor coatings', 'Polyaspartic coatings', 'Polyurea coatings', 'Metallic epoxy', 'Decorative flake flooring'],
 });
 
+// Header 'Free estimate' jumps to the page's own form, or to the contact page when there is none.
+const estTarget = (body) => { const m = String(body).match(/<form[^>]*\bid="([^"]+)"/); return m ? `#${m[1]}` : '/contact/'; };
+
 export function layout({ path, title, description, body, current = '', image = 'heroFloor', schema = [], breadcrumbs, bodyClass = '' }) {
   const url = abs(path);
   const graph = [
@@ -63,7 +66,7 @@ export function layout({ path, title, description, body, current = '', image = '
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>
 </head>
 <body class="${bodyClass}">
-${header(current)}
+${header(current).replace('#__EST__', estTarget(body))}
 <main id="main">
 ${body}
 </main>
