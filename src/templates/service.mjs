@@ -114,7 +114,7 @@ ${related.length ? `<section class="section section--tight" aria-labelledby="rel
     <div class="reveal">
       <h2 id="est-h">${esc(s.cta.heading)}</h2>
       ${md(s.cta.body)}
-      <ul class="closer__contact"><li><span>Call or text</span>${phoneLink()}</li><li><span>Service area</span><a href="/service-areas/">${esc(site.cityLong)} &amp; nearby</a></li></ul>
+      <ul class="closer__contact"><li><span>Call or text</span>${phoneLink()}</li><li><span>Service area</span><a href="/areas/">${esc(site.cityLong)} &amp; nearby</a></li></ul>
     </div>
     <div class="form-card reveal reveal-delay-1">${leadForm({ id: `${s.slug}-form`, heading: 'Request your estimate', withMessage: true, preset: s.formPreset })}</div>
   </div>

@@ -15,10 +15,10 @@ const today = new Date().toISOString().slice(0, 10);
 const pages = [
   { path: '/', html: renderHome(), priority: '1.0' },
   ...services.map((s) => ({ path: `/${s.slug}/`, html: renderService(s), priority: '0.9' })),
-  { path: '/about-us/', html: renderAbout(), priority: '0.6' },
-  { path: '/service-areas/', html: renderAreas(), priority: '0.7' },
-  { path: '/contact-us/', html: renderContact(), priority: '0.7' },
-  { path: '/privacy-policy/', html: renderPrivacy(), priority: '0.2' },
+  { path: '/about/', html: renderAbout(), priority: '0.6' },
+  { path: '/areas/', html: renderAreas(), priority: '0.7' },
+  { path: '/contact/', html: renderContact(), priority: '0.7' },
+  { path: '/privacy/', html: renderPrivacy(), priority: '0.2' },
 ];
 
 await rm(out, { recursive: true, force: true });

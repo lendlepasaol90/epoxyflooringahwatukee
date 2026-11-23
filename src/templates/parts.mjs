@@ -45,7 +45,7 @@ export function leadForm({ id, variant = 'stacked', heading, intro, button = 'Re
     <div class="hp" aria-hidden="true"><label for="${f('company')}">Company</label><input id="${f('company')}" name="company" type="text" tabindex="-1" autocomplete="off"></div>
   </div>
   <button class="btn btn--primary lead-form__submit" type="submit"><span>${esc(button)}</span></button>
-  <p class="lead-form__fine">We reply by phone or email. Your details are used only to answer this request — see our <a href="/privacy-policy/">privacy policy</a>.</p>
+  <p class="lead-form__fine">We reply by phone or email. Your details are used only to answer this request — see our <a href="/privacy/">privacy policy</a>.</p>
   <div class="lead-form__status" role="status" aria-live="polite"></div>
 </form>`;
 }
@@ -72,26 +72,15 @@ export function header(current = '') {
             <ul class="menu__list">${svcLinks}</ul>
           </div>
         </li>
-        <li class="nav__item"><a class="nav__link" href="/about-us/"${current === 'about' ? ' aria-current="page"' : ''}>About us</a></li>
-        <li class="nav__item"><a class="nav__link" href="/service-areas/"${current === 'areas' ? ' aria-current="page"' : ''}>Service areas</a></li>
-        <li class="nav__item"><a class="nav__link" href="/contact-us/"${current === 'contact' ? ' aria-current="page"' : ''}>Contact</a></li>
+        <li class="nav__item"><a class="nav__link" href="/about/"${current === 'about' ? ' aria-current="page"' : ''}>About</a></li>
+        <li class="nav__item"><a class="nav__link" href="/areas/"${current === 'areas' ? ' aria-current="page"' : ''}>Areas</a></li>
+        <li class="nav__item"><a class="nav__link" href="/contact/"${current === 'contact' ? ' aria-current="page"' : ''}>Contact</a></li>
       </ul>
     </nav>
     <div class="site-header__actions">
       <a class="header-phone" href="${site.phoneHref}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>${esc(site.phone)}</span></a>
-      <button class="btn btn--primary btn--sm" type="button" data-quote-toggle aria-expanded="false" aria-controls="quote-panel">Free estimate</button>
+      <a class="btn btn--primary btn--sm" href="#__EST__">Free estimate</a>
       <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span></button>
-    </div>
-  </div>
-  <div class="quote-panel" id="quote-panel" hidden>
-    <div class="quote-panel__inner wrap">
-      <div class="quote-panel__copy">
-        <p class="quote-panel__title">Tell us about your floor</p>
-        <p>Four quick details and we'll be in touch to set up a free on-site look at your floor.</p>
-        <p class="quote-panel__alt">Prefer to talk? ${phoneLink()}</p>
-      </div>
-      ${leadForm({ id: 'header-form', variant: 'inline', button: 'Send request' })}
-      <button class="quote-panel__close" type="button" data-quote-close aria-label="Close estimate form">×</button>
     </div>
   </div>
   <div class="mobile-nav" id="mobile-nav" hidden>
@@ -100,9 +89,9 @@ export function header(current = '') {
       <ul>${services.map((s) => `<li><a href="/${s.slug}/">${esc(s.name)}</a></li>`).join('')}</ul>
       <ul class="mobile-nav__main">
         <li><a href="/">Home</a></li>
-        <li><a href="/about-us/">About us</a></li>
-        <li><a href="/service-areas/">Service areas</a></li>
-        <li><a href="/contact-us/">Contact</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/areas/">Areas</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
       <a class="btn btn--primary btn--block" href="${site.phoneHref}">Call ${esc(site.phone)}</a>
     </nav>
@@ -129,7 +118,7 @@ export function footer() {
     <nav class="site-footer__links" aria-label="Footer more">
       <p class="site-footer__head">More</p>
       <ul>${services.slice(half).map((s) => `<li><a href="/${s.slug}/">${esc(s.name)}</a></li>`).join('')}
-        <li><a href="/about-us/">About us</a></li><li><a href="/service-areas/">Service areas</a></li><li><a href="/contact-us/">Contact</a></li></ul>
+        <li><a href="/about/">About</a></li><li><a href="/areas/">Areas</a></li><li><a href="/contact/">Contact</a></li></ul>
     </nav>
     <div class="site-footer__map">
       <p class="site-footer__head">Where we work</p>
@@ -141,7 +130,7 @@ export function footer() {
   </div>
   <div class="wrap site-footer__base">
     <p>© <span data-year>2026</span> ${esc(site.name)}</p>
-    <p><a href="/privacy-policy/">Privacy policy</a> <a href="/sitemap.xml">Sitemap</a></p>
+    <p><a href="/privacy/">Privacy policy</a> <a href="/sitemap.xml">Sitemap</a></p>
   </div>
 </footer>
 <a class="sticky-call" href="${site.phoneHref}" aria-label="Call ${esc(site.phone)}"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg> Call</a>`;
