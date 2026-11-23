@@ -1,4 +1,4 @@
-/* Epoxy Flooring Ahwatukee — "Sandstone & Arch" design system */
+/* Ahwatukee Epoxy Flooring — "Sandstone & Arch" design system */
 :root {
   --sand: #f3ebe0;
   --sand-2: #eadcc9;
@@ -562,3 +562,11 @@ strong { color: var(--charcoal); font-weight: 600; }
 
 /* Let comparison tables scroll inside their box instead of widening the page */
 main *:has(table) { min-width: 0; }
+
+/* Business address and hours */
+.site-footer__nap address { font-style: normal; margin-top: 0.6rem; line-height: 1.5; }
+.site-footer__hours { margin-top: 0.4rem; }
+.hours { margin: 0.75rem 0 0; display: grid; gap: 0.4rem; max-width: 22rem; }
+.hours div { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(0,0,0,.08); padding-bottom: 0.4rem; }
+.hours dt { font-weight: 600; }
+.hours dd { margin: 0; }

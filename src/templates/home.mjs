@@ -1,7 +1,7 @@
 import { site } from '../site.mjs';
 import { esc, md, inline, img, beginDedupe, endDedupe } from '../lib/html.mjs';
 import { layout } from './layout.mjs';
-import { leadForm, phoneLink } from './parts.mjs';
+import { leadForm, phoneLink, addressOneLine, hoursShort } from './parts.mjs';
 import { services } from '../content/services/index.mjs';
 
 const faqs = [
@@ -44,7 +44,7 @@ export function renderHome() {
   <div class="wrap home-hero__grid">
     <div class="reveal is-in">
       <h1 id="hero-h">Garage and concrete floors built for Ahwatukee summers</h1>
-      <p class="lede">We grind, repair and coat concrete for homes and businesses in the Foothills and across the East Valley. Epoxy, flake, metallic, polyaspartic and polyurea systems, chosen for the slab you actually have and the heat it actually sees.</p>
+      <p class="lede">Ahwatukee Epoxy Flooring is an epoxy flooring contractor in Ahwatukee, AZ that puts prep first. We grind, repair and coat concrete for homes and businesses in the Foothills and across the East Valley. Epoxy, flake, metallic, polyaspartic and polyurea systems, chosen for the slab you actually have and the heat it actually sees.</p>
       <div class="home-hero__ctas">
         <a class="btn btn--primary" href="#estimate">Book a free estimate</a>
         <a class="btn btn--ghost" href="#services">See floor coatings</a>
@@ -318,6 +318,9 @@ export function renderHome() {
       <p>Tell us a little about the floor and we will set a time to see it. You will get a written quote with each option priced out, plus our honest take on which one fits.</p>
       <ul class="closer__contact">
         <li><span>Call or text</span>${phoneLink()}</li>
+        ${s.email ? `<li><span>Email</span><a href="mailto:${esc(s.email)}">${esc(s.email)}</a></li>` : ''}
+        ${s.address ? `<li><span>Address</span><b>${esc(addressOneLine())}</b></li>` : ''}
+        ${s.hours ? `<li><span>Hours</span><b>${esc(hoursShort())}</b></li>` : ''}
         <li><span>Estimates</span><b>Free, in person, in writing</b></li>
         <li><span>Serving</span><b>${esc(s.cityLong)} &amp; nearby</b></li>
       </ul>
@@ -329,8 +332,8 @@ export function renderHome() {
   endDedupe();
   return layout({
     path: '/',
-    title: 'Epoxy Flooring Ahwatukee | Garage & Concrete Floor Coatings',
-    description: 'Garage floor coatings, flake and metallic epoxy, polyaspartic and commercial floors for Ahwatukee Foothills homes and businesses, built for Arizona heat.',
+    title: 'Ahwatukee Epoxy Flooring | Epoxy Flooring Contractor in Ahwatukee, AZ',
+    description: 'Ahwatukee Epoxy Flooring Company: garage epoxy, flake and metallic floors, patio and commercial coatings in Ahwatukee, Phoenix. Call (480) 576-6166.',
     body,
     image: 'heroFloor',
     schema: [

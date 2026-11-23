@@ -1,8 +1,23 @@
-// Site-wide configuration for Epoxy Flooring Ahwatukee.
+// Site-wide configuration for Ahwatukee Epoxy Flooring.
 // Everything that is business-specific lives here so it can be updated in one place.
 
 export const site = {
-  name: 'Epoxy Flooring Ahwatukee',
+  name: 'Ahwatukee Epoxy Flooring',
+  owner: 'Lyndsey Muehl',
+  category: 'Flooring Contractor',
+  description: "Ahwatukee Epoxy Flooring helps homeowners and businesses upgrade ordinary concrete with durable, attractive floor coatings designed for Arizona living. Based in Ahwatukee, Phoenix, AZ, we specialize in garage epoxy flooring, decorative flake systems, metallic epoxy finishes, patio coatings, basement flooring, and commercial epoxy floors. From sun-exposed concrete to heavily used garage floors, we provide professional surface preparation and customized coating solutions that improve appearance and simplify maintenance. Whether you're refreshing a residential garage or upgrading a business space, Ahwatukee Epoxy Flooring delivers flooring solutions built for everyday use. Serving Ahwatukee, South Mountain, Chandler, Tempe, and nearby Phoenix communities.",
+  address: {
+    street: '3906 E Ray Rd #639',
+    city: 'Phoenix',
+    state: 'AZ',
+    zip: '85044',
+    country: 'US',
+  },
+  // Days use schema.org names; shown on the site and output as openingHoursSpecification.
+  hours: [
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], label: 'Monday – Saturday', opens: '07:00', closes: '18:00', text: '7:00 AM – 6:00 PM' },
+    { days: ['Sunday'], label: 'Sunday', closed: true, text: 'Closed' },
+  ],
   domain: 'https://epoxyflooringahwatukee.com',
   city: 'Ahwatukee',
   cityLong: 'Ahwatukee Foothills',
@@ -10,22 +25,18 @@ export const site = {
   state: 'AZ',
   locale: 'en_US',
 
-  // PLACEHOLDER — replace with the real business number before launch.
-  // phoneVerified stays false until a real number is added; while false the number
-  // is shown on the page but kept out of structured data.
-  phone: '(480) 555-0142',
-  phoneHref: 'tel:+14805550142',
-  phoneVerified: false,
+  phone: '(480) 576-6166',
+  phoneHref: 'tel:+14805766166',
+  phoneVerified: true,
 
-  // Optional public email. Leave empty to hide.
-  email: '',
+  email: 'info@epoxyflooringahwatukee.com',
 
-  // City-centred map (no street address is claimed).
+  // Footer map, centred on the business address.
   map: {
-    query: 'Ahwatukee Foothills, Phoenix, AZ',
-    lat: 33.3434,
-    lng: -111.9845,
-    zoom: 12,
+    query: '3906 E Ray Rd #639, Phoenix, AZ 85044',
+    lat: 33.3203,
+    lng: -111.9971,
+    zoom: 13,
   },
 
   serviceAreas: [

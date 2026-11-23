@@ -1,4 +1,4 @@
-/* Epoxy Flooring Ahwatukee — interactions (no dependencies) */
+/* Ahwatukee Epoxy Flooring — interactions (no dependencies) */
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];

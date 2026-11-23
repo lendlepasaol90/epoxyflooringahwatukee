@@ -1,7 +1,7 @@
 import { site } from '../site.mjs';
 import { esc, md, img } from '../lib/html.mjs';
 import { layout, crumbs } from './layout.mjs';
-import { leadForm, phoneLink } from './parts.mjs';
+import { leadForm, phoneLink, addressOneLine, directionsUrl, hoursHtml } from './parts.mjs';
 import { services } from '../content/services/index.mjs';
 
 function simpleHero({ title, lede, image = 'heroBackdrop', trail }) {
@@ -22,6 +22,9 @@ export function renderAbout() {
 <section class="section section--tight">
   <div class="wrap page-body">
     <div class="prose">
+      <p>${esc(site.description)}</p>
+      ${site.owner ? `<p>${esc(site.name)} is owned by <strong>${esc(site.owner)}</strong>. As an epoxy flooring company in Ahwatukee, AZ, we are a local crew that answers its own phone and stands behind its own floors.</p>` : ''}
+      <h2>How we work</h2>
       ${md(`Our approach comes from a simple view of the trade: most coating failures are preparation failures. The resins on the market today are very good. What separates a floor that lasts fifteen years from one that peels by the second summer is almost always what happened to the concrete before the first coat went down, and whether the system was chosen for the conditions it would face.
 
 That shapes everything about how we work. We spend more time on grinding, testing and repair than some companies spend on the whole job. We explain what we find in plain language. And we put it all in writing so you know exactly what you are paying for.`)}
@@ -50,7 +53,7 @@ We will ask a few questions about the space, then set a time to visit. At the vi
 </section>`;
   return layout({
     path: '/about-us/',
-    title: 'About Us | Epoxy Flooring Ahwatukee',
+    title: 'About Us | Ahwatukee Epoxy Flooring Contractor',
     description: 'Meet the Ahwatukee floor coating crew that puts concrete prep first. How we work, what we believe about floors and what to expect from your free estimate.',
     body,
     current: 'about',
@@ -96,7 +99,7 @@ If your town is not listed, give us a call. We take on commercial and warehouse 
 </section>`;
   return layout({
     path: '/service-areas/',
-    title: 'Service Areas | Epoxy Flooring Ahwatukee, Tempe & Chandler',
+    title: 'Service Areas | Ahwatukee Epoxy Flooring, Tempe & Chandler',
     description: 'Epoxy and garage floor coatings for Ahwatukee Foothills, Tempe, Chandler, south Phoenix, Laveen, Gilbert, Guadalupe, Mesa and Sun Lakes.',
     body,
     current: 'areas',
@@ -116,8 +119,10 @@ export function renderContact() {
       <ul class="closer__contact">
         <li><span>Phone</span>${phoneLink()}</li>
         ${site.email ? `<li><span>Email</span><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></li>` : ''}
+        ${site.address ? `<li><span>Address</span><a href="${directionsUrl()}" target="_blank" rel="noopener">${esc(addressOneLine())}</a></li>` : ''}
         <li><span>Service area</span><a href="/service-areas/">${esc(site.cityLong)} and nearby</a></li>
       </ul>
+      ${site.hours ? `<h3 style="margin-top:2rem">Business hours</h3>${hoursHtml()}` : ''}
       <h3 style="margin-top:2rem">What happens next</h3>
       <ol><li>We get in touch to set a time for your estimate.</li><li>We visit, measure, test the slab and show samples.</li><li>You receive a written, itemized quote.</li></ol>
     </div>
@@ -157,7 +162,7 @@ You can ask us to update or delete the information you have sent by contacting u
 ## Changes
 
 We may update this policy from time to time. The current version is always on this page.`)}</div></section>`;
-  return layout({ path: '/privacy-policy/', title: 'Privacy Policy | Epoxy Flooring Ahwatukee', description: 'How Epoxy Flooring Ahwatukee collects, uses and protects the information you submit through estimate and contact forms on this website.', body, breadcrumbs: trail });
+  return layout({ path: '/privacy-policy/', title: 'Privacy Policy | Ahwatukee Epoxy Flooring', description: 'How Ahwatukee Epoxy Flooring collects, uses and protects the information you submit through estimate and contact forms on this website.', body, breadcrumbs: trail });
 }
 
 export function render404() {
@@ -166,7 +171,7 @@ export function render404() {
   <p class="lede">The link may be old or mistyped. Try one of these instead.</p>
   <p><a class="btn btn--primary" href="/">Go to the homepage</a> <a class="btn btn--ghost" href="/garage-floor-coatings/">Garage floor coatings</a> <a class="btn btn--ghost" href="/contact-us/">Contact us</a></p>
 </div></section>`;
-  return layout({ path: '/404.html', title: 'Page not found | Epoxy Flooring Ahwatukee', description: 'The page you requested could not be found.', body }).replace(
+  return layout({ path: '/404.html', title: 'Page not found | Ahwatukee Epoxy Flooring', description: 'The page you requested could not be found.', body }).replace(
     '<meta name="robots" content="index, follow, max-image-preview:large">',
     '<meta name="robots" content="noindex">',
   );

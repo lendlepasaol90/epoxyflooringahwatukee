@@ -50,6 +50,15 @@ export function leadForm({ id, variant = 'stacked', heading, intro, button = 'Re
 </form>`;
 }
 
+const a = site.address;
+export const addressOneLine = () => (a ? `${a.street}, ${a.city}, ${a.state} ${a.zip}` : '');
+export const addressHtml = () =>
+  a ? `<address>${esc(a.street)}<br>${esc(a.city)}, ${esc(a.state)} ${esc(a.zip)}</address>` : '';
+export const directionsUrl = () => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${site.name}, ${addressOneLine()}`)}`;
+export const hoursHtml = (cls = 'hours') =>
+  site.hours ? `<dl class="${cls}">${site.hours.map((h) => `<div><dt>${esc(h.label)}</dt><dd>${esc(h.text)}</dd></div>`).join('')}</dl>` : '';
+export const hoursShort = () => (site.hours ? site.hours.map((h) => `${h.label.replace('Monday – Saturday', 'Mon – Sat').replace('Sunday', 'Sun')}: ${h.text}`).join(' · ') : '');
+
 export const phoneLink = (cls = '') => `<a class="${cls}" href="${site.phoneHref}">${esc(site.phone)}</a>`;
 
 export function header(current = '') {
@@ -112,7 +121,7 @@ export function header(current = '') {
 
 export function footer() {
   const m = site.map;
-  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(m.query)}&ll=${m.lat},${m.lng}&z=${m.zoom}&output=embed`;
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(site.address ? `${site.name}, ${m.query}` : m.query)}&z=${m.zoom}&output=embed`;
   const half = Math.ceil(services.length / 2);
   return `<footer class="site-footer">
   <div class="wrap site-footer__grid">
@@ -121,6 +130,8 @@ export function footer() {
       <p>Garage, residential and commercial floor coatings for Ahwatukee Foothills and the surrounding East Valley.</p>
       <p class="site-footer__phone">${phoneLink()}</p>
       ${site.email ? `<p><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></p>` : ''}
+      ${site.address ? `<div class="site-footer__nap">${addressHtml()}</div>` : ''}
+      ${site.hours ? `<p class="site-footer__small site-footer__hours">${esc(hoursShort())}</p>` : ''}
     </div>
     <nav class="site-footer__links" aria-label="Footer services">
       <p class="site-footer__head">Coatings</p>
@@ -132,7 +143,7 @@ export function footer() {
         <li><a href="/about-us/">About us</a></li><li><a href="/service-areas/">Service areas</a></li><li><a href="/contact-us/">Contact</a></li></ul>
     </nav>
     <div class="site-footer__map">
-      <p class="site-footer__head">Where we work</p>
+      <p class="site-footer__head">Find us</p>
       <div class="map-frame">
         <iframe title="Map of ${esc(m.query)}" src="${mapSrc}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
