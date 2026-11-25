@@ -199,32 +199,15 @@
     });
   });
 
-  // Before/after drag slider: the "after" photo is clipped from the left at --pos
+  // Before/after slider: the range input covers the photo, so dragging and arrow keys both work
   $$('[data-compare]').forEach((fig) => {
     const range = $('.ba-compare__range', fig);
-    const stage = $('.ba-compare__stage', fig);
-    const set = (v) => fig.style.setProperty('--pos', `${v}%`);
-    range.addEventListener('input', () => set(range.value));
-    set(range.value);
-    let dragging = false;
-    const fromEvent = (e) => {
-      const r = stage.getBoundingClientRect();
-      const v = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100));
-      range.value = Math.round(v);
-      set(v.toFixed(1));
+    const set = () => {
+      fig.style.setProperty('--pos', `${range.value}%`);
+      range.setAttribute('aria-valuetext', `${range.value}% before, ${100 - range.value}% after`);
     };
-    stage.addEventListener('pointerdown', (e) => {
-      if (e.pointerType === 'mouse' && e.button !== 0) return;
-      dragging = true;
-      fig.classList.add('is-dragging');
-      stage.setPointerCapture?.(e.pointerId);
-      fromEvent(e);
-      e.preventDefault();
-    });
-    stage.addEventListener('pointermove', (e) => dragging && fromEvent(e));
-    const stop = () => { dragging = false; fig.classList.remove('is-dragging'); };
-    stage.addEventListener('pointerup', stop);
-    stage.addEventListener('pointercancel', stop);
+    range.addEventListener('input', set);
+    set();
   });
 
   $$('[data-year]').forEach((y) => (y.textContent = new Date().getFullYear()));

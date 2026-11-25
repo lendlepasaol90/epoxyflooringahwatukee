@@ -64,22 +64,23 @@ export function renderHome() {
 </section>
 
 <section class="section section--paper ba" aria-labelledby="ba-h">
-  <div class="wrap">
-    <div class="narrow reveal">
-      <h2 id="ba-h">Before and after: a driveway in Ahwatukee</h2>
-      <p class="muted">This tired grey driveway was ground, repaired and finished with a tan decorative flake coating that now matches the desert landscaping and holds up to hot tires.</p>
-    </div>
-    <figure class="ba-compare reveal" data-compare style="--pos:50%">
-      <div class="ba-compare__stage">
-        <div class="ba-compare__img">${img('driveBefore', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 960px' })}</div>
-        <div class="ba-compare__img ba-compare__img--after">${img('driveAfter', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 960px' })}</div>
-        <span class="ba-compare__tag">Before</span>
-        <span class="ba-compare__tag ba-compare__tag--after">After</span>
-        <div class="ba-compare__handle" aria-hidden="true"><span></span></div>
-        <input class="ba-compare__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the driveway before and after coating">
+  <div class="wrap ba__grid">
+    <div class="ba__copy">
+      <p class="kicker reveal">Recent project</p>
+      <h2 id="ba-h" class="reveal">Before and after: a driveway in Ahwatukee</h2>
+      <p class="muted reveal reveal-delay-1">This tired grey driveway was ground, repaired and finished with a tan decorative flake coating that now matches the desert landscaping and holds up to hot tires. Drag the handle, or use your arrow keys, to compare.</p>
+      <div class="ba__links reveal reveal-delay-2">
+        <a class="text-link" href="/decorative-flake-flooring/">Decorative flake flooring <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <a class="text-link" href="/patio-concrete-coatings/">Outdoor concrete coatings <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
       </div>
-      <figcaption>Drag the handle to compare the same driveway before and after coating.</figcaption>
-    </figure>
+    </div>
+    <div class="ba-compare reveal reveal-delay-1" data-compare style="--pos:50%">
+      <div class="ba-compare__img">${img('driveBefore', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 700px' })}</div>
+      <div class="ba-compare__img ba-compare__img--after">${img('driveAfter', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 700px' })}</div>
+      <span class="ba-compare__tag" aria-hidden="true">Before</span>
+      <span class="ba-compare__tag ba-compare__tag--after" aria-hidden="true">After</span>
+      <input class="ba-compare__range" type="range" min="0" max="100" value="50" aria-label="Driveway coating comparison: slide to compare before and after" aria-valuetext="50% before, 50% after">
+      <div class="ba-compare__bar" aria-hidden="true"><span class="ba-compare__grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
     </div>
   </div>
 </section>
