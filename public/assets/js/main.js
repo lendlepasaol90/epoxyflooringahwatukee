@@ -199,16 +199,5 @@
     });
   });
 
-  // Before/after slider: the range input covers the photo, so dragging and arrow keys both work
-  $$('[data-compare]').forEach((fig) => {
-    const range = $('.ba-compare__range', fig);
-    const set = () => {
-      fig.style.setProperty('--pos', `${range.value}%`);
-      range.setAttribute('aria-valuetext', `${range.value}% before, ${100 - range.value}% after`);
-    };
-    range.addEventListener('input', set);
-    set();
-  });
-
   $$('[data-year]').forEach((y) => (y.textContent = new Date().getFullYear()));
 })();
