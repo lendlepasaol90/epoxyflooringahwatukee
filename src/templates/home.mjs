@@ -63,6 +63,25 @@ export function renderHome() {
   </div>
 </section>
 
+<section class="section section--paper ba" aria-labelledby="ba-h">
+  <div class="wrap">
+    <div class="narrow reveal">
+      <h2 id="ba-h">Before and after: a driveway in Ahwatukee</h2>
+      <p class="muted">This tired grey driveway was ground, repaired and finished with a tan decorative flake coating that now matches the desert landscaping and holds up to hot tires.</p>
+    </div>
+    <div class="ba__grid">
+      <figure class="ba__item reveal">
+        <span class="ba__tag">Before</span>
+        ${img('driveBefore', { keep: true, widths: [480, 800], sizes: '(max-width: 760px) 92vw, 600px', ratio: 1.42 })}
+      </figure>
+      <figure class="ba__item reveal reveal-delay-1">
+        <span class="ba__tag ba__tag--after">After</span>
+        ${img('driveAfter', { keep: true, widths: [480, 800], sizes: '(max-width: 760px) 92vw, 600px', ratio: 1.42 })}
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="intro-h">
   <div class="wrap intro-split">
     <h2 id="intro-h" class="reveal">A flooring crew that starts with the concrete, not the color chart</h2>
