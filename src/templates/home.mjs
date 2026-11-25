@@ -69,15 +69,17 @@ export function renderHome() {
       <h2 id="ba-h">Before and after: a driveway in Ahwatukee</h2>
       <p class="muted">This tired grey driveway was ground, repaired and finished with a tan decorative flake coating that now matches the desert landscaping and holds up to hot tires.</p>
     </div>
-    <div class="ba__grid">
-      <figure class="ba__item reveal">
-        <span class="ba__tag">Before</span>
-        ${img('driveBefore', { keep: true, widths: [480, 800], sizes: '(max-width: 760px) 92vw, 600px', ratio: 1.42 })}
-      </figure>
-      <figure class="ba__item reveal reveal-delay-1">
-        <span class="ba__tag ba__tag--after">After</span>
-        ${img('driveAfter', { keep: true, widths: [480, 800], sizes: '(max-width: 760px) 92vw, 600px', ratio: 1.42 })}
-      </figure>
+    <figure class="ba-compare reveal" data-compare style="--pos:50%">
+      <div class="ba-compare__stage">
+        <div class="ba-compare__img">${img('driveBefore', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 960px' })}</div>
+        <div class="ba-compare__img ba-compare__img--after">${img('driveAfter', { keep: true, widths: [480, 800, 932], sizes: '(max-width: 1020px) 92vw, 960px' })}</div>
+        <span class="ba-compare__tag">Before</span>
+        <span class="ba-compare__tag ba-compare__tag--after">After</span>
+        <div class="ba-compare__handle" aria-hidden="true"><span></span></div>
+        <input class="ba-compare__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the driveway before and after coating">
+      </div>
+      <figcaption>Drag the handle to compare the same driveway before and after coating.</figcaption>
+    </figure>
     </div>
   </div>
 </section>

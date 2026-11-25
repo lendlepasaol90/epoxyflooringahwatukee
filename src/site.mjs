@@ -93,7 +93,7 @@ export const images = {
   xTerrazzo: { file: 'xTerrazzo', group: 'finish', w: 1600, h: 1067, widths: [480, 800, 1200, 1600], alt: "Close-up of a light speckled floor finish with colored chips" },
   xPatio: { file: 'xPatio', group: 'outdoor', w: 1600, h: 1064, widths: [480, 800, 1200, 1600], alt: "Shaded patio with lounge chairs outside a desert home" },
   xClinic: { file: 'xClinic', group: 'commercial', w: 1600, h: 1200, widths: [480, 800, 1200, 1600], alt: "Long clinic corridor with a gleaming, seamless floor" },
-  driveBefore: { file: 'driveBefore', group: 'project', w: 944, h: 663, widths: [480, 800], alt: "Ahwatukee home with a plain grey concrete driveway before coating" },
-  driveAfter: { file: 'driveAfter', group: 'project', w: 876, h: 618, widths: [480, 800], alt: "Same Ahwatukee driveway after a tan decorative flake coating" },
+  driveBefore: { file: 'driveBefore', group: 'project', w: 932, h: 660, widths: [480, 800, 932], alt: "Ahwatukee home with a plain grey concrete driveway before coating" },
+  driveAfter: { file: 'driveAfter', group: 'project', w: 932, h: 660, widths: [480, 800, 932], alt: "The same Ahwatukee driveway after a tan decorative flake coating" },
   flakeGarage: { file: 'flakeGarage', group: 'finish', w: 1600, h: 1066, widths: [480, 800, 1200, 1600], alt: "Close-up of a full-broadcast flake floor in tan and grey" },
 };
